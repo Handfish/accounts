@@ -1,4 +1,5 @@
 @Records = React.createClass
+   displayName: 'Records'
 
    getInitialState: ->
       records: @props.data
@@ -8,6 +9,8 @@
 
    addRecord: (record) ->
       records = @state.records.slice()
+      records.push record
+      @setState records: records
 
    render: ->
       React.DOM.div

@@ -6,7 +6,7 @@
       date: ''
       amount: ''
 
-   handleSubmit: (e) ->
+   handleSubmit: ->
       e.preventDefault()
       $.post '', { record: @state }, (data) =>
          @props.handleNewRecord data
